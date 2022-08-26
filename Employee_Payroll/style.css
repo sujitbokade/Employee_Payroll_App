@@ -13,19 +13,19 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 2px solid green;
-    
+    border: 0px solid green;
 }
 
 .logo-content{
     display: flex;
     flex-direction: row;
     align-items: center;
+    border: 0px solid green;
     width: 80%;
 }
 
 .logo-content-img{
-    border: solid 1px #42515f;
+    border: solid 0px #42515f;
 }
 
 .emp-text{
@@ -55,9 +55,9 @@ body{
     padding: 44px 60px;
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #080808;
+    border: 1px solid #f5f5f5;
     border-radius: 8px;
-    opacity: 2;
+    opacity: 1;
 }
 
 .form-head{
@@ -117,4 +117,115 @@ label{
     width: 40px;
     border-radius: 50%;
     margin-left: 20px;
+}
+
+select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+}
+
+
+.buttonParent{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 1px solid #707070;
+    cursor: pointer;
+}
+
+.submitButton{                
+    margin-right: 30px;
+}
+
+.submitButton:hover{
+    background-color: #f5f5f5;
+    border: none;
+
+}
+
+.cancelButton{
+    text-decoration: none;
+    text-align: center;
+}
+
+.cancelButton:hover{
+    background-color: #f5f5f5;
+    border: none;
+}
+
+.resetButton:hover{
+    background-color: #f5f5f5;
+    border: none;
+}
+
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
+@media only screen and (max-width: 960px){
+    .cancelButton{
+        margin-left: 0px;
+    }
+    .form{
+        width: 85%;
+        padding: 44px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .form{
+       margin-top: 10px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+    .uploadButton{
+        justify-content: flex-start;
+    }
+
+    .profile-radio-button{
+        flex-flow: wrap;
+    }
+
+    .submit-reset{
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .submitButton{
+        margin: 0;
+    }
+
+    .buttonParent{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
